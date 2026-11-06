@@ -1,0 +1,11 @@
+{
+  "name": "personal-site",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.mjs",
+    "sample": "node build.mjs --sample",
+    "preview": "node build.mjs --sample && python3 -m http.server 8080 -d dist"
+  }
+}

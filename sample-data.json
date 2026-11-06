@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "note": "SAMPLE DATA for local preview only (node build.mjs --sample). Same shape the Apps Script web app returns.",
+  "tabs": {
+    "Profile": [
+      ["Field", "Value", "Notes"],
+      ["name", "Mohita Sample", ""],
+      ["headline", "Educator, speaker & writer", ""],
+      ["intro", "I help teams and individuals grow through practical, human-centred learning — on stage, on screen and in the classroom.", ""],
+      ["about", "For over two decades I've worked at the intersection of education, leadership and communication. My work is simple: make complex ideas feel clear, warm and usable.\n\nToday I speak at conferences, run workshops for organisations, and share short ideas every week on LinkedIn, YouTube and Instagram.\nThis line is on the same paragraph, after a single line break.\n\nTesting escaping: <script>alert('x')</script> & \"quotes\", commas, and more.", ""],
+      ["photo", "", ""],
+      ["location", "Hyderabad, India", ""],
+      ["email", "hello@example.com", ""],
+      ["cta_label", "", ""],
+      ["cta_link", "", ""],
+      ["resume_pdf", "https://example.com/resume.pdf", ""],
+      ["linkedin_url", "https://www.linkedin.com/in/example", ""],
+      ["youtube_url", "https://www.youtube.com/@example", ""],
+      ["instagram_url", "https://www.instagram.com/example", ""],
+      ["x_url", "", ""],
+      ["contact_heading", "Let's work together", ""],
+      ["contact_text", "For talks, workshops, collaborations or just to say hello — I'd love to hear from you.", ""],
+      ["accent_color", "#1E5B57", ""],
+      ["site_url", "https://example.com", ""],
+      ["meta_description", "", ""]
+    ],
+    "Highlights": [
+      ["Value", "Label"],
+      ["20+", "Years of experience"],
+      ["150+", "Talks & workshops"],
+      ["10k", "Learners reached"],
+      ["3", "Books & guides"]
+    ],
+    "Services": [
+      ["Title", "Description"],
+      ["Keynotes & talks", "Engaging, story-driven talks for conferences, schools and company events."],
+      ["Workshops", "Hands-on sessions for teams, built around your goals — in person or online."],
+      ["Mentoring", "One-to-one guidance for educators and early-career professionals."]
+    ],
+    "Content": [
+      ["Link", "Title", "Date", "Note", "Featured", "Hide", "Image", "Platform"],
+      ["https://www.youtube.com/watch?v=AAAAAAAAAAA", "Keynote: Learning that lasts", "2026-09-14", "Full keynote from the national education summit, on building habits of curiosity.", "TRUE", "FALSE", "", ""],
+      ["https://www.linkedin.com/posts/example-activity-1", "", "2026-10-02", "Three questions I ask before every workshop — and why the third one matters most.", "FALSE", "FALSE", "", ""],
+      ["https://www.instagram.com/p/EXAMPLE1/", "Behind the scenes at the Pune workshop", "2026-08-21", "", "FALSE", "FALSE", "", ""],
+      ["https://www.youtube.com/shorts/BBBBBBBBBBB", "60 seconds on giving better feedback", "2026-07-30", "", "FALSE", "FALSE", "", ""],
+      ["https://example-magazine.com/interview", "Interview: what classrooms can teach boardrooms", "28/06/2026", "A long-form interview, with \"quotes\", commas, and a <b>tag</b> that must be escaped.", "FALSE", "FALSE", "", ""],
+      ["https://www.linkedin.com/posts/example-activity-2", "On saying no, gracefully", "2026-06-10", "", "FALSE", "FALSE", "", ""],
+      ["https://open.spotify.com/episode/example", "Podcast guest: The Learning Hour", "2026-05-18", "", "FALSE", "FALSE", "", ""],
+      ["https://www.linkedin.com/posts/example-hidden", "This row is hidden", "2026-05-01", "", "FALSE", "TRUE", "", ""],
+      ["not a link", "Bad row", "", "", "", "", "", ""],
+      ["https://www.instagram.com/p/EXAMPLE2/", "Five books on my desk this month", "2026-04-11", "", "", "", "", ""],
+      ["https://www.linkedin.com/posts/example-activity-3", "What 20 years of teaching taught me about listening", "2026-03-03", "", "", "", "", ""],
+      ["https://www.youtube.com/watch?v=CCCCCCCCCCC", "Workshop recap: designing for attention", "2026-02-14", "", "", "", "", ""],
+      ["https://www.linkedin.com/posts/example-activity-4", "A note to new teachers", "2026-01-20", "", "", "", "", ""],
+      ["https://medium.com/@example/essay", "Essay: the quiet power of examples", "2025-12-02", "", "", "", "", ""]
+    ],
+    "Resume": [
+      ["Section", "Title", "Organization", "Dates", "Details"],
+      ["Experience", "Independent consultant & speaker", "Self-employed", "2018 – Present", "Keynotes, workshops and mentoring for schools and companies.\n- 150+ sessions delivered\n- Clients across education, tech and non-profit"],
+      ["Experience", "Head of Learning", "Example Institute", "2010 – 2018", "Led a team of 25 educators; designed the flagship leadership curriculum."],
+      ["Experience", "Senior Teacher", "Example School", "2003 – 2010", ""],
+      ["Education", "M.A. Education", "Example University", "2003", ""],
+      ["Recognition", "Educator of the Year", "Example Foundation", "2016", ""]
+    ]
+  }
+}

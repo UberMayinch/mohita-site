@@ -1,0 +1,53 @@
+name: Deploy site
+
+on:
+  workflow_dispatch: # triggered by the Google Sheet (apps-script/Code.gs) or the Actions tab
+    inputs:
+      reason:
+        description: Why this build ran
+        required: false
+        default: manual
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 3 * * *" # daily backup refresh; GitHub pauses this in inactive repos, the Sheet trigger is primary
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: site-cache-${{ github.run_id }}
+          restore-keys: site-cache-
+      - name: Build from Google Sheet
+        run: node build.mjs
+        env:
+          SHEET_JSON_URL: ${{ secrets.SHEET_JSON_URL }}
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
