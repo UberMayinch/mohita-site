@@ -157,8 +157,8 @@ var TABS = [
     ],
     widths: [150, 420, 460],
   },
-  { name: 'Highlights', rows: [['Value', 'Label'], ['20+', 'Years of experience']], widths: [120, 300] },
-  { name: 'Services', rows: [['Title', 'Description'], ['Workshops', 'Hands-on sessions for teams.']], widths: [220, 520] },
+  { name: 'Highlights', rows: [['Value', 'Label']], widths: [120, 300] },
+  { name: 'Services', rows: [['Title', 'Description']], widths: [220, 520] },
   {
     name: 'Content',
     rows: [['Link', 'Title', 'Date', 'Note', 'Featured', 'Hide', 'Image', 'Platform']],
@@ -168,7 +168,7 @@ var TABS = [
   },
   {
     name: 'Resume',
-    rows: [['Section', 'Title', 'Organization', 'Dates', 'Details'], ['Experience', 'Your role', 'Company', '2020 – Present', '- One achievement\n- Another']],
+    rows: [['Section', 'Title', 'Organization', 'Dates', 'Details']],
     widths: [120, 240, 220, 140, 420],
   },
   {

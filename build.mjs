@@ -149,13 +149,17 @@ async function loadSheet() {
   throw new BuildError(`Could not load the Google Sheet: ${lastErr.message}`);
 }
 
+// Example rows that older versions of "Set up tabs" wrote into the sheet — never publish them.
+const TEMPLATE_ROWS = new Set(['20+|years of experience', 'workshops|hands-on sessions for teams.', 'experience|your role|company|2020 – present']);
+const isTemplateRow = (o) => TEMPLATE_ROWS.has(Object.entries(o).filter(([k, v]) => k !== '_row' && v).map(([, v]) => v.split('\n')[0].toLowerCase()).slice(0, 4).join('|'));
+
 function toObjects(rows = []) {
   if (!rows.length) return [];
   const keys = rows[0].map(slug);
   return rows
     .slice(1)
     .map((r, i) => Object.assign(Object.fromEntries(keys.map((k, j) => [k, String(r[j] ?? '').trim()])), { _row: i + 2 }))
-    .filter((o) => keys.some((k) => k && o[k]));
+    .filter((o) => keys.some((k) => k && o[k]) && !isTemplateRow(o));
 }
 
 function readProfile(rows = []) {
